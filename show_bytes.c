@@ -10,12 +10,12 @@ void show_bytes(byte_pointer a, int len) {
 	for(i = 0; i < len; i++) {
 		printf("%.2x ", a[i]);
 	}
-
+/*
 	printf("\nint? \n");
 	for(i = 0; i < len; i++) {
-		printf("%i ", a[i]);
+		printf("%d ", a[i]);
 	}
-	
+*/	
 	printf("\n\n");
 }
 
