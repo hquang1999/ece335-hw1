@@ -21,7 +21,8 @@ void printBinary (int max, unsigned num) {
 	}
 	printf("\n");
 }
-
+// This method returns when the 1st one occurs
+// Mainly for the print function to look nicer
 int getFirstOne(unsigned int x, int bit) {
 	int posOne = bit;
 	// creates a mask of 1 with 0's that max is
@@ -32,7 +33,7 @@ int getFirstOne(unsigned int x, int bit) {
 	// our number x
 	for (; posOne > 0; posOne--) {
 		// AND statement with mask and x
-		if (posOne & x) {
+		if (mask & x) {
 			break;
 		}
 		// reduces mask 
@@ -42,12 +43,12 @@ int getFirstOne(unsigned int x, int bit) {
 	return posOne;
 }
 
+// Main function. Returns 1 if odd bit, else return 0
 int any_odd_one (unsigned int x, int bit) {
 	printf("Decimal: %d\n",x);
 	// max # of shifts
 	int max = getFirstOne(x,bit);
 
-	printf("max = %d\n",max);
 	// Print function to visualize what the decimal is in binary
 	printBinary(max, x);
 
