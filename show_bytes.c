@@ -10,12 +10,7 @@ void show_bytes(byte_pointer a, int len) {
 	for(i = 0; i < len; i++) {
 		printf("%.2x ", a[i]);
 	}
-/*
-	printf("\nint? \n");
-	for(i = 0; i < len; i++) {
-		printf("%d ", a[i]);
-	}
-*/	
+	
 	printf("\n\n");
 }
 
@@ -28,9 +23,9 @@ void show_float(float a) {
 }
 
 int main(int argv, char* argc[]) {
-	int a = atoi("14281");
-	int b = atoi("-14281");
-	float c = atof("14281");
+	int a = atoi(argc[1]);
+	int b = atoi(argc[2]);
+	float c = atof(argc[3]);
 
 	printf("show int %d\n", a);
 	show_int(a);
